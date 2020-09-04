@@ -26,6 +26,7 @@ import (
 	"github.com/vmware/govmomi/vim25/types"
 )
 
+// DeployInfo is data for a deployed OVA
 type DeployInfo struct {
 	TemplateName  string
 	VMObject      *object.VirtualMachine
