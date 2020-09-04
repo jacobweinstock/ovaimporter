@@ -3,7 +3,15 @@
 [![Test and Build](https://github.com/jacobweinstock/ovaimporter/workflows/Test%20and%20Build/badge.svg)](https://github.com/jacobweinstock/ovaimporter/actions?query=workflow%3A%22Test+and+Build%22)
 [![Go Report](https://goreportcard.com/badge/github.com/jacobweinstock/ovaimporter)](https://goreportcard.com/report/github.com/jacobweinstock/ovaimporter)
 
-Import a local or remote OVA
+Import a local or remote OVA.
+
+## Alternatives
+
+Why not just use `govc`?   
+`govc import.ova` requires a spec file, or you get something like `govc: Host did not have any virtual network defined.`  
+It has a command to get the spec file `govc import.spec`, but alas, it doesn't take a remote location: `govc: remote path not supported`.  
+This means in order to leverage `govc` we'd have to download the ova and then run `govc import.spec` and add a network or find another tool or some other way.  
+Downloading the OVA only to turn around and upload it to a vCenter could be a considerable amount of extra time not needed, hence the advent of `ovaimporter`.  
 
 ## Usage
 
