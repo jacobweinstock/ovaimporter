@@ -11,6 +11,10 @@ help:
 test: ## Run unit tests
 	go test -v -covermode=count ./...
 
+.PHONY: integration
+integration: ## Integration tests with go test
+	go test -tags=integration -v ./...
+
 .PHONY: cover
 cover: ## Run unit tests with coverage report
 	go test -coverprofile=cover.out ./... || true
