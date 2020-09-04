@@ -7,7 +7,7 @@ import (
 )
 
 func TestDeployOVATemplateRealVcenter(t *testing.T) {
-	//t.Skip("skipping test, real vCenter needed.")
+	t.Skip("skipping test, real vCenter needed.")
 
 	timeout := 5 * time.Minute
 	ctx, can := context.WithTimeout(context.Background(), timeout)
